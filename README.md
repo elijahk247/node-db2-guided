@@ -19,9 +19,11 @@ configure knex connections
   - useNullAsDefault: true, only for sqlite
 
 commonly used migration commands: 
-- npx knex migrate:make <give it a name>...
+- npx knex migrate:make <give it a name>... <-- createsa new migration file
   - ex. knex migrate:make init
     - uses development environment by default
+
+- npx knex migrate:latest <-- run prending migrations to update the databse
 
 
 Project: Track Food AKA menu items
