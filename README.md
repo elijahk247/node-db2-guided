@@ -24,11 +24,22 @@ commonly used migration commands:
     - uses development environment by default
 
 - npx knex migrate:latest <-- run prending migrations to update the databse
+  - find any migration that has not be run yet, and runs the latest changes to code
+  - look for any changes that has not be applied to the database in the migrations file, and applies those changes 
+  - created the food.db3 file in the database file 
 
 
 Project: Track Food AKA menu items
 - menu_items table: 
-  - id: primary key, unsigned (non-negative numbers) integer
+  - id: primary key (pk), unsigned (non-negative numbers) integer
   - name: string, required (NOT NULL), unique, make searching by name fast
   - price: floating point, not required
   - available: boolean, default 'false' 
+
+- clients table:
+  - id: pk, uuid, string (long string), (default because of primary key:unique, required)
+  - email: string , unique, indexed
+  - name: string, indexed 
+
+
+> EVERY CHANGE TO THE DATABASE SCHEMA (structure) SHOULD BE DONE WITH A NEW MIGRATION 
