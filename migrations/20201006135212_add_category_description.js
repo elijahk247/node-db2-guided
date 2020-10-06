@@ -6,6 +6,11 @@ exports.up = function(knex) {
   })
 };
 
+/* run the down function using knex migrate:rollback
+  - undo the migration that added 'description'
+  - undos the latest migration
+  - undos each migrations that were added in order 
+*/
 exports.down = function(knex) {
   return knex.schema.table('categories', tbl => {
     tbl.dropColumn('description');
