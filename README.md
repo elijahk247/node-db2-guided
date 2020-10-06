@@ -28,6 +28,8 @@ commonly used migration commands:
   - look for any changes that has not be applied to the database in the migrations file, and applies those changes 
   - created the food.db3 file in the database file 
 
+- npx knex migrate:rollback <-- undo changes from the latest migration, one at a time 
+
 
 Project: Track Food AKA menu items
 - menu_items table: 

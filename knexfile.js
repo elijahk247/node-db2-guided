@@ -31,7 +31,7 @@ module.exports = {
   // configuration for rthe production environment db connection
 
   production: {
-    client: 'postgresql',
+    client: 'pg',
     connection: {
       host: 'postgresql://pgontheweb.com',
       database: 'my_db',
