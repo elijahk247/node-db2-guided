@@ -1,0 +1,10 @@
+Steps to setup: 
+npm init -y
+npx gitignore node
+npm i -D nodemon
+npm i express helmet knex sqlite3
+touch index.js
+
+add scripts: 
+"server": "nodemon index.js"
+"start": "node index.js"
